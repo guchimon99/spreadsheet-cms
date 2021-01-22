@@ -8,6 +8,7 @@
   "scripts": {
     "start": "run-p serve watch",
     "serve": "http-server ./public",
+    "fetch": "node ./scripts/fetch-contents.js",
     "clean": "run-p clean:*",
     "clean:html": "rimraf ./public/**/*.html",
     "watch": "run-p watch:*",
