@@ -4,10 +4,6 @@
 name: Fetch contents from Google Spreadsheet
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
   workflow_dispatch:
     inputs:
       logLevel:
