@@ -1,0 +1,10 @@
+extends ../layout/_base
+
+block contents
+  .max-w-6xl.px-4.py-12.mx-auto
+    h1.text-2xl Spread Sheet CMS
+
+    ul
+      each content in contents
+        li
+          a(href=`/contents/${content["番号"]}.html`) #{content["名目"]}
