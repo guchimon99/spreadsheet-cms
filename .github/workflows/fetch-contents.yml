@@ -31,3 +31,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run fetch
+    - name: Commit files
+      run: |
+        git add .
+        git commit -m "[UPDATE] contents.json" -a
+        git pull
+        git push origin main
