@@ -1,0 +1,25 @@
+{
+  "name": "spreadsheet-cms",
+  "version": "1.0.0",
+  "description": "Google Spreadsheet を使ったCMSツール",
+  "author": "guchimon99 <guchimon99@gmail.com>",
+  "license": "",
+  "repository": "https://github.com/guchimon99/spreadsheet-cms",
+  "scripts": {
+    "start": "run-p serve watch",
+    "serve": "http-server ./public",
+    "clean": "run-p clean:*",
+    "clean:html": "rimraf ./public/**/*.html",
+    "watch": "run-p watch:*",
+    "watch:pug": "pug ./src/pages --out ./public --watch",
+    "build": "run-s clean build:*",
+    "build:pug": "pug ./src/pages --out ./public"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.12.3",
+    "npm-run-all": "^4.1.5",
+    "pug-cli": "^1.0.0-alpha6",
+    "rimraf": "^3.0.2"
+  }
+}
