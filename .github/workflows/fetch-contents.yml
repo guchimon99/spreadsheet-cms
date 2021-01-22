@@ -31,6 +31,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run fetch
+    - name: Set Up Git 
+      run: |
+        git config --global user.email "workflows@github.com"
+        git config --global user.name "GitHub Workflows"
     - name: Commit files
       run: |
         git add .
